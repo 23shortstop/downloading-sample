@@ -11,8 +11,8 @@ object ResponseService extends RestHelper {
 
       () => for {
         session <- S.session
-        function <- session.runParams(request).headOption
-        response <- function.asInstanceOf[List[LiftResponse]].headOption
+        functions <- session.runParams(request).headOption
+        response <- serveResponse(functions)
       } yield response
 
   }
@@ -22,6 +22,11 @@ object ResponseService extends RestHelper {
     S.addFunctionMap(name, () => response)
     val endpoint = s"${S.hostAndPath}/shortcut?$name=_"
     JsCmds.RedirectTo(endpoint)
+  }
+
+  private def serveResponse(functions: Any): Option[LiftResponse] = functions match {
+    case (response: LiftResponse) :: Nil => Some(response)
+    case _ => None
   }
 
 }
