@@ -1,7 +1,6 @@
-downloading-sample
-==================
+Data downloading with REST in Lift framework
+============================================
 
-This code sample is the supplement to the article
+Code sample for the article
 <a href="http://sysgears.com/articles/download-data-without-using-ResponseShortcutException-in-Lift/" target="_blank">
-"Download data without using ResponseShortcutException in Lift"</a>
-which reviews how to implement data downloading from a server to a client in Lift framework.
+"Download data without using ResponseShortcutException in Lift"</a>.
