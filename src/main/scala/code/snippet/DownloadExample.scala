@@ -1,6 +1,6 @@
 package code.snippet
 
-import code.util.ResponseService
+import code.util.DownloadService
 import net.liftweb.http._
 import net.liftweb.util.Helpers._
 
@@ -15,7 +15,7 @@ object DownloadExample {
 
   def restDownload = {
     "data-name=download [onclick]" #>
-      SHtml.ajaxInvoke(() => ResponseService.shortcut(response))
+      SHtml.ajaxInvoke(() => DownloadService.pass(response))
   }
 
   def response = {
