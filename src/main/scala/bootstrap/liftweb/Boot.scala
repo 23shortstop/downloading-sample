@@ -1,7 +1,7 @@
 package bootstrap.liftweb
 
+import code.rest.FileDownload
 import net.liftweb._
-import code.util.DownloadService
 import http._
 import sitemap._
 import net.liftmodules.{FoBo, JQueryModule}
@@ -16,7 +16,7 @@ class Boot {
     // where to search snippet
     LiftRules.addToPackages("code")
 
-    LiftRules.dispatch.append(DownloadService)
+    LiftRules.dispatch.append(FileDownload)
 
     // Build SiteMap
     val entries = List(

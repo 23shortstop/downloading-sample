@@ -6,12 +6,14 @@
   </head>
   <body data-lift-content-id="main">
     <div id="main" data-lift="surround?with=default;at=content">
-        <div class="container main-container" data-lift="DownloadExample.exceptionDownload">
-            <span>
+        <div class="container main-container" data-lift="ExceptionExample.download">
+            <input type="text" data-name="text"
+                   placeholder="Type some text">
+            <label>
                 Click this
                 <a data-name="download"></a>
-                to download a file
-            </span>
+                to download the typed text.
+            </label>
         </div>
     </div>
   </body>
