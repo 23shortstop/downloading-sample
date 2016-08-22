@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="UTF-8">
     <title>Link Download</title>
-  </head>
-  <body data-lift-content-id="main">
-    <div id="main" data-lift="surround?with=default;at=content">
-        <div class="container main-container" data-lift="ExceptionExample.download">
-            <input type="text" data-name="text"
-                   placeholder="Type some text">
-            <label>
-                Click this
-                <a data-name="download"></a>
-                to download the typed text.
-            </label>
-        </div>
+</head>
+<body data-lift-content-id="main">
+<div id="main" data-lift="surround?with=default;at=content">
+    <h2>File downloading with ResponseShortcutException</h2>
+    <div class="container main-container" data-lift="RestExample.download">
+        <input type="text" data-name="text"
+               placeholder="Type some text">
+        <label>
+            Click this
+            <a data-name="download">link</a>
+            to download a file with the typed text using ResponseShortcutException.
+        </label>
     </div>
-  </body>
+</div>
+</body>
 </html>
